@@ -26,6 +26,7 @@ function Board() {
       setBoardState({
         ...board, columns: rearangedColumns
       })
+      return;
     }
 
     const columns = Array.from(board.columns);
@@ -39,7 +40,7 @@ function Board() {
 
     const finishCol: Column = {
       id: finishColIndex[0],
-      todos: startColIndex[1].todos
+      todos: finishColIndex[1].todos
     }
 
     if (!startCol || !finishCol) return;
